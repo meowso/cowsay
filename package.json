@@ -12,7 +12,8 @@
   "scripts": {
     "clean": "rm -rf dist/**.*",
     "compile": "tsc",
-    "start": "npm run clean && npm run compile && npm run say && npm run lolcat && npm run convert && npm run tweet",
+    "start": "npm run clean && npm run compile && npm run say && npm run lolcat && npm run convert",
+    "blog": "npm run clean && nodemon src/blog.ts",
     "convert": "node dist/convert.js",
     "say": "node dist/say.js",
     "lolcat": "node dist/lolcat.js > ./dist/lolcat.ansi",
@@ -44,7 +45,8 @@
     "word-wrap": "^1.2.5"
   },
   "devDependencies": {
+    "@types/lolcatjs": "^2.4.1",
     "@types/node": "^20.12.2",
-    "@types/lolcatjs": "^2.4.1"
+    "nodemon": "^3.1.3"
   }
 }
